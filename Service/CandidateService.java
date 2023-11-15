@@ -8,7 +8,7 @@ public class CandidateService {
 
 	// can have result as 'P' only if all 3 marks are 50 and above
 	public String addCandidate(Candidate candidate) {
-		if( (candidate.getMark1() >= 50 && candidate.getMark2() >= 50 && candidate.getMark3() >= 50) && (candidate.getResult() == 'F') ) {
+		if( (candidate.getMark1() >= 50 && candidate.getMark2() >= 50 && candidate.getMark3() >= 50) && (candidate.getResult() == 'P') ) {
 			CandidateDAO dataBase = new CandidateDAO();
 			return dataBase.addCandidate(candidate);
 		} else {
