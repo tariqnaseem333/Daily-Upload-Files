@@ -1,4 +1,4 @@
-package assignmentSet2;
+package friday_01_dec;
 
 public class CourseRegistrationTester {
 
