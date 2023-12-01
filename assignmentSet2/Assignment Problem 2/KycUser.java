@@ -1,25 +1,24 @@
-package assignmentSet2;
+package friday_01_dec;
 
-public class KycUser extends User {
+public class KYCUser extends User {
 	
-//	Instance Variable
+//	Instance Variables
 	private int rewardPoints;
 	
 //	Constructor
-	public KycUser( int id, String userName, String email, double walletBalance ) {
-		super( id, userName, email, walletBalance );
+	public KYCUser(int id, String userName, String email, double walletBalance) {
+		super(id, userName, email, walletBalance);
 	}
 
-//	Methods
+//	Method
 	@Override
-	public boolean makePayment( double billAmount ) {
-		if( super.makePayment(billAmount) ) {
-			this.setRewardPoints( this.getRewardPoints() + ( (int)(billAmount*10 / 100.0) ) );
+	public boolean makePayement( double billAmount ) {
+		if( super.makePayement(billAmount) ) {
+			this.setRewardPoints( this.getRewardPoints() + (int)(billAmount * (10/100.0)) );
 			return true;
 		}
 		return false;
 	}
-
 	
 //	Getters and Setters
 	public int getRewardPoints() {
@@ -28,5 +27,6 @@ public class KycUser extends User {
 	public void setRewardPoints(int rewardPoints) {
 		this.rewardPoints = rewardPoints;
 	}
+
 
 }

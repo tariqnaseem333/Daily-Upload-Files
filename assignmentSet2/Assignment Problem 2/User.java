@@ -1,4 +1,4 @@
-package assignmentSet2;
+package friday_01_dec;
 
 public class User {
 	
@@ -7,24 +7,23 @@ public class User {
 	private String userName;
 	private String email;
 	private double walletBalance;
-	
+
 //	Constructor
-	public User( int id, String userName, String email, double walletBalance ) {
+	public User(int id, String userName, String email, double walletBalance) {
 		this.id = id;
 		this.userName = userName;
 		this.email = email;
 		this.walletBalance = walletBalance;
 	}
-
+	
 //	Methods
-	public boolean makePayment( double billAmount ) {
-		if( this.walletBalance >= billAmount ) {
-			this.setWalletBalance(this.walletBalance-billAmount);
+	public boolean makePayement( double billAmount ) {
+		if( this.getWalletBalance() >= billAmount ) {
+			this.setWalletBalance(this.getWalletBalance()-billAmount);
 			return true;
 		} 
 		return false;
 	}
-
 	
 //	Getters and Setters
 	public int getId() {
@@ -51,8 +50,5 @@ public class User {
 	public void setWalletBalance(double walletBalance) {
 		this.walletBalance = walletBalance;
 	}
-	
-	
+
 }
-
-
