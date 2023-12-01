@@ -1,6 +1,6 @@
-package thursday_23_nov;
+package friday_01_dec;
 
-public class Intern implements StudentInterface {
+public class Intern implements Student {
 	
 //	Instance Variables
 	private int marksSecured;
@@ -13,12 +13,13 @@ public class Intern implements StudentInterface {
 	}
 	
 //	Method
+	@Override
 	public void calcPercentage() {
 		if( this.marksSecured > 300 || this.projectMarks > 100 ) {
 			System.out.println("Please enter the correct marks");
 			return;
 		}
-		double percentage = ((this.marksSecured + this.projectMarks) / (double)StudentInterface.TOTAL_MAXIMUM_MARKS) * 100.0;
+		double percentage = ( (double)(this.marksSecured + this.projectMarks) / Student.TOTAL_MAXIMUM_MARKS) * 100.0;
 		System.out.println("The total aggregate percentage secured by the intern is " + percentage);
 	}
 
