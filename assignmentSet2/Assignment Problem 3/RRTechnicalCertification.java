@@ -1,4 +1,4 @@
-package assignmentSet2;
+package friday_01_dec;
 
 public abstract class RRTechnicalCertification implements Certification {
 	
@@ -12,7 +12,7 @@ public abstract class RRTechnicalCertification implements Certification {
 	public static int counter = 1001;
 	
 //	Constructor
-	protected RRTechnicalCertification(String studentName, String courseName, int admissionTestMarks) {
+	public RRTechnicalCertification(String studentName, String courseName, int admissionTestMarks) {
 		this.studentName = studentName;
 		this.courseName = courseName;
 		this.admissionTestMarks = admissionTestMarks;
@@ -20,7 +20,7 @@ public abstract class RRTechnicalCertification implements Certification {
 	
 //	Methods
 	public abstract void generateRegistrationId();
-	public void displayDetails() {
+	public void displayCourseDetails() {
 		if( this instanceof RegularCourseCertification ) {
 			System.out.println("Regular Course Registration Details");
 		} else if( this instanceof CrashCourseCertification ) {
@@ -30,7 +30,7 @@ public abstract class RRTechnicalCertification implements Certification {
 		System.out.println("Student Name     : " + this.getStudentName());
 		System.out.println("Course Name      : " + this.getCourseName());
 		if( this instanceof RegularCourseCertification ) {
-			System.out.println("Course Duration  : " + ( (RegularCourseCertification)this).getCourseDuration() + " months");
+			System.out.println("Course Duration  : " + ((RegularCourseCertification)this).getCourseDuration() + " months");
 		} else if( this instanceof CrashCourseCertification ) {
 			System.out.println("Course Duration  : 2 months");
 		}
@@ -38,7 +38,7 @@ public abstract class RRTechnicalCertification implements Certification {
 		System.out.println("Fees             : " + this.calculateFee());
 		System.out.println();
 	}
-	
+
 //	Getters and Setters
 	public String getStudentName() {
 		return studentName;
@@ -63,6 +63,6 @@ public abstract class RRTechnicalCertification implements Certification {
 	}
 	public void setAdmissionTestMarks(int admissionTestMarks) {
 		this.admissionTestMarks = admissionTestMarks;
-	} 
+	}
 
 }

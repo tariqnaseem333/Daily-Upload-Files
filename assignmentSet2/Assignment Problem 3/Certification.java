@@ -1,4 +1,4 @@
-package assignmentSet2;
+package friday_01_dec;
 
 public interface Certification {
 	
@@ -6,7 +6,7 @@ public interface Certification {
 	public double REGULAR_COURSE_FEE = 2000;
 	public double CRASH_COURSE_FEE = 5000;
 	
-//	Methods
+//	Method
 	public double calculateFee();
-	
+
 }
